@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_display_countries"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#333333"
+    tools:context="com.example.james.testapp.ProfileActivity">
+
+    <TextView
+        android:text="Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:id="@+id/textView"
+        android:textSize="56sp"
+        android:textColor="#fafafa"
+        android:onClick="onButtonClick"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="0dp"
+        android:textAlignment="gravity"
+        android:gravity="left">
+
+        <TextView
+            android:text="First name: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fnameFieldLabel"
+            android:textSize="22sp"
+            android:textColor="#fafafa"
+            android:layout_alignParentTop="true"
+            android:gravity="left"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text=""
+            android:ems="10"
+            android:textColor="#fafafa"
+            android:textSize="22sp"
+            android:id="@+id/fname"
+            android:layout_alignBaseline="@+id/fnameFieldLabel"
+            android:layout_alignBottom="@+id/fnameFieldLabel"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/fnameFieldLabel"
+            android:layout_toEndOf="@+id/fnameFieldLabel" />
+
+        <TextView
+            android:text="Last name: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lnameFieldLabel"
+            android:layout_marginTop="10dp"
+            android:textSize="22sp"
+            android:textColor="#fafafa"
+            android:layout_below="@+id/fnameFieldLabel"
+            android:gravity="left"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text=""
+            android:ems="10"
+            android:textColor="#fafafa"
+            android:textSize="22sp"
+            android:id="@+id/lname"
+            android:layout_alignBaseline="@+id/lnameFieldLabel"
+            android:layout_alignBottom="@+id/lnameFieldLabel"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/fnameFieldLabel"
+            android:layout_toEndOf="@+id/fnameFieldLabel" />
+
+        <TextView
+            android:text="Email: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailFieldLabel"
+            android:layout_marginTop="10dp"
+            android:textSize="22sp"
+            android:textColor="#fafafa"
+            android:layout_below="@+id/lnameFieldLabel"
+            android:gravity="left"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:text=""
+            android:ems="10"
+            android:textColor="#fafafa"
+            android:textSize="22sp"
+            android:id="@+id/email"
+            android:layout_alignBaseline="@+id/emailFieldLabel"
+            android:layout_alignBottom="@+id/emailFieldLabel"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/fnameFieldLabel"
+            android:layout_toEndOf="@+id/fnameFieldLabel" />
+
+        <TextView
+            android:text="Password: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwdFieldLabel"
+            android:layout_marginTop="10dp"
+            android:textSize="22sp"
+            android:textColor="#fafafa"
+            android:layout_below="@+id/emailFieldLabel"
+            android:gravity="left"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:text=""
+            android:ems="10"
+            android:textColor="#fafafa"
+            android:textSize="22sp"
+            android:id="@+id/passwd"
+            android:layout_alignBaseline="@+id/passwdFieldLabel"
+            android:layout_alignBottom="@+id/passwdFieldLabel"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignLeft="@+id/email"
+            android:layout_alignStart="@+id/email" />
+
+        <Button
+            android:text="Submit changes"
+            android:layout_width="330dp"
+            android:layout_marginTop="25dp"
+            android:id="@+id/submitButton"
+            android:layout_height="75dp"
+            android:layout_below="@+id/passwdFieldLabel"
+            android:onClick="submitChanges"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:text="Delete account"
+            android:layout_width="330dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/deleteButton"
+            android:layout_height="75dp"
+            android:layout_below="@+id/submitButton"
+            android:onClick="submitDelete"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/results"
+            android:layout_marginTop="10dp"
+            android:textSize="22sp"
+            android:textColor="#fafafa"
+            android:layout_below="@+id/deleteButton"
+            android:gravity="left"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
